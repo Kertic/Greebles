@@ -1,4 +1,5 @@
-﻿using Code.Management;
+using System;
+using Code.Management;
 using UnityEngine;
 
 namespace Code.Player
@@ -10,8 +11,9 @@ namespace Code.Player
         private static readonly int _isWalking = Animator.StringToHash("isWalking");
 
         [SerializeField] public float movementSpeed;
-        [SerializeField] public Animator _animator;
-        [SerializeField] public SpriteRenderer _sprite;
+        [SerializeField] public Animator animator;
+        [SerializeField] public SpriteRenderer sprite;
+        [SerializeField] public Rigidbody2D rigidBody;
 
         public void ResolveServices()
         {
@@ -26,7 +28,7 @@ namespace Code.Player
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
             UpdateMotion();
         }
@@ -37,10 +39,10 @@ namespace Code.Player
             {
                 if (!_inputManager.GetButton(type)) return;
                 gameObject.transform.position += movementDirection * movementSpeed;
-                _animator.SetBool(_isWalking, true);
+                animator.SetBool(_isWalking, true);
             }
 
-            _animator.SetBool(_isWalking, false);
+            animator.SetBool(_isWalking, false);
             UpdateDirection(InputManager.InputTypes.UP_HELD, Vector3.up);
             UpdateDirection(InputManager.InputTypes.DOWN_HELD, Vector3.down);
             UpdateDirection(InputManager.InputTypes.LEFT_HELD, Vector3.left);
@@ -55,7 +57,7 @@ namespace Code.Player
                 _isFacingRight = true;
             }
 
-            _sprite.flipX = !_isFacingRight;
+            sprite.flipX = !_isFacingRight;
         }
     }
 }

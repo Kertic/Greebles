@@ -20,6 +20,24 @@ TextureImporter:
   - first:
       213: -6456126674905863391
     second: oie_1214419IaxJfF9F_5
+  - first:
+      213: -7794579864548528691
+    second: template_right_0
+  - first:
+      213: -7502969892574208051
+    second: template_right_1
+  - first:
+      213: -8483144225951041961
+    second: template_right_2
+  - first:
+      213: 1963479506062330318
+    second: template_right_3
+  - first:
+      213: 6899123995334080327
+    second: template_right_4
+  - first:
+      213: 394148769387896688
+    second: template_right_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -140,127 +158,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: oie_1214419IaxJfF9F_0
+      name: template_right_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae1778c3b3c5d2d44a05807f52f4c2a1
-      internalID: -6174592109425763400
+      spriteID: 1ba0ef308d54486448b714587f8a2691
+      internalID: -7794579864548528691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oie_1214419IaxJfF9F_1
+      name: template_right_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: beef43631020b8b40aca810d517a85ea
-      internalID: 453171395866766668
+      spriteID: f623c5d698e59d54daebcf99e7ebd93d
+      internalID: -7502969892574208051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oie_1214419IaxJfF9F_2
+      name: template_right_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 084c4c890311ffb41bb48878625fea65
-      internalID: 5930270847155655671
+      spriteID: 1969df25ddbca5d4a868e59908c668b9
+      internalID: -8483144225951041961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oie_1214419IaxJfF9F_3
+      name: template_right_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 213a4352f46ff3347ad747cd70d6977b
-      internalID: -2321001354470161611
+      spriteID: c28c6119fd544f24599e1c0d368e6ea4
+      internalID: 1963479506062330318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oie_1214419IaxJfF9F_4
+      name: template_right_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92f92954ecb77724bb46c3fb77ab8635
-      internalID: 6571641624301058022
+      spriteID: 3db583d61cf1ef84aa6dcba97b627177
+      internalID: 6899123995334080327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oie_1214419IaxJfF9F_5
+      name: template_right_5
       rect:
         serializedVersion: 2
         x: 80
         y: 0
         width: 16
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08960847893534743bc05eb86e5c57c1
-      internalID: -6456126674905863391
+      spriteID: 67962549fba048a45b468ac24ebb397a
+      internalID: 394148769387896688
       vertices: []
       indices: 
       edges: []
