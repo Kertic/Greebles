@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Code.Player
 {
-    public class PlayerController : MonoBehaviour, IServiceResolvable
+    public class PlayerController : MonoBehaviour
     {
         private InputManager _inputManager;
         private bool _isFacingRight;
@@ -15,9 +15,13 @@ namespace Code.Player
         [SerializeField] public SpriteRenderer sprite;
         [SerializeField] public Rigidbody2D rigidBody;
 
-        public void ResolveServices()
+        private void ResolveServices()
         {
             _inputManager = ServiceManager.Instance.Resolve<InputManager>();
+        }
+
+        private void Awake()
+        {
         }
 
         // Start is called before the first frame update

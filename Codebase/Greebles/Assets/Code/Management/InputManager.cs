@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using Code.Management.Services;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Code.Management
 {
-    public class InputManager : MonoBehaviour
+    public class InputManager : BaseService
     {
         public enum InputTypes
         {
@@ -26,13 +28,22 @@ namespace Code.Management
 
         private Dictionary<InputTypes, bool> _inputDictionary = new Dictionary<InputTypes, bool>();
 
-        private void Awake()
+        private void Start()
         {
-            ServiceManager.Instance.AddService<InputManager>(this);
             for (int i = 0; i < (int) InputTypes.NUMOFINPUTS; i++)
             {
                 _inputDictionary[(InputTypes) i] = false;
             }
+        }
+        
+        public override void AddToServiceManager()
+        {
+           ServiceManager.Instance.AddService(this); 
+        }
+
+        protected override void ResolveServices()
+        {
+            
         }
 
         // Update is called once per frame

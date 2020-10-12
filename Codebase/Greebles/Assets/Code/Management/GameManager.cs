@@ -1,22 +1,31 @@
-﻿using UnityEngine;
+﻿using Code.Management.Services;
+using Code.Player;
+using UnityEngine;
 
 namespace Code.Management
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : BaseService
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        }
+        [SerializeField] private PlayerController _player;
 
-        // Update is called once per frame
-        void Update()
+        public PlayerController Player
         {
+            get { return _player; }
         }
 
         public void ExitGame()
         {
             Application.Quit();
+        }
+
+        protected override void ResolveServices()
+        {
+            
+        }
+
+        public override void AddToServiceManager()
+        {
+           ServiceManager.Instance.AddService(this); 
         }
     }
 }
