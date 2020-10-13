@@ -12,13 +12,16 @@ namespace Code.Management.Services
             AddToServiceManager();
         }
 
-        private void Start()
+        protected void Start()
         {
             ResolveServices();
         }
 
         protected abstract void ResolveServices();
 
-        public abstract void AddToServiceManager();
+        public virtual void AddToServiceManager()
+        {
+            
+        }
     }
 }

@@ -7,9 +7,12 @@ namespace Code.Management
 {
     public class TileGridManager : BaseService
     {
-        private PlayerController _player;
+        private GameManager _gameManager;
 
-        [SerializeField] private Grid _grid;
+        [SerializeField] private Grid _grid = null;
+        [SerializeField] private Camera _mainCamera = null;
+
+        private Vector3Int _mousedOverCell;
 
         public override void AddToServiceManager()
         {
@@ -18,13 +21,13 @@ namespace Code.Management
 
         protected override void ResolveServices()
         {
-            _player = ServiceManager.Instance.Resolve<GameManager>().Player;
+            _gameManager = ServiceManager.Instance.Resolve<GameManager>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(_grid.WorldToCell(_player.transform.position));
+            _mousedOverCell = _grid.WorldToCell(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
         }
     }
 }

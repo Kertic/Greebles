@@ -28,8 +28,9 @@ namespace Code.Management
 
         private Dictionary<InputTypes, bool> _inputDictionary = new Dictionary<InputTypes, bool>();
 
-        private void Start()
+        private new void Start()
         {
+            base.Start();
             for (int i = 0; i < (int) InputTypes.NUMOFINPUTS; i++)
             {
                 _inputDictionary[(InputTypes) i] = false;
@@ -46,8 +47,7 @@ namespace Code.Management
             
         }
 
-        // Update is called once per frame
-        private void Update()
+        private void FixedUpdate()
         {
             CheckHeldButtons();
             CheckTapButton();
@@ -59,6 +59,7 @@ namespace Code.Management
             _inputDictionary[InputTypes.DOWN_TAP] = Input.GetButtonDown("down");
             _inputDictionary[InputTypes.LEFT_TAP] = Input.GetButtonDown("left");
             _inputDictionary[InputTypes.RIGHT_TAP] = Input.GetButtonDown("right");
+            _inputDictionary[InputTypes.INVENTORY_TAP] = Input.GetButtonDown("inventory");
         }
 
         private void CheckHeldButtons()
@@ -67,6 +68,7 @@ namespace Code.Management
             _inputDictionary[InputTypes.DOWN_HELD] = Input.GetButton("down");
             _inputDictionary[InputTypes.LEFT_HELD] = Input.GetButton("left");
             _inputDictionary[InputTypes.RIGHT_HELD] = Input.GetButton("right");
+            _inputDictionary[InputTypes.INVENTORY_HELD] = Input.GetButton("inventory");
         }
 
         public bool GetButton(InputTypes type)

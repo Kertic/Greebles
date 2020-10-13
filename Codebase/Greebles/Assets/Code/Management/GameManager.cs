@@ -6,7 +6,7 @@ namespace Code.Management
 {
     public class GameManager : BaseService
     {
-        [SerializeField] private PlayerController _player;
+        [SerializeField] private PlayerController _player = null;
 
         public PlayerController Player
         {
